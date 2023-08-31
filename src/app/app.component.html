@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Geodata App</h1>
+  <div>
+    <button (click)="changeSortType('luogo')">Ordina per Luogo</button>
+    <button (click)="changeSortType('altitudine')">Ordina per Altitudine</button>
+  </div>
+  <data-display *ngFor="let item of data | orderBy: sortBy" [item]="item"></data-display>
+</div>
